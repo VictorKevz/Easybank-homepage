@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --dark-blue: hsl(233, 26%, 24%);
+  --lime-green: hsl(136, 65%, 51%);
+  --bright-cyan: hsl(192, 70%, 51%);
+
+  --grayish-blue: hsl(233, 8%, 62%);
+  --light-grayish-blue: hsl(220, 16%, 96%);
+  --very-light-gray: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 10px;
+}
+body {
+  font-family: "Public Sans", sans-serif;
+  overflow-x: hidden;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: var(--dark-blue);
+  font-weight: 300;
+}
+p {
+  font-size: 1.76rem;
+  color: var(--grayish-blue);
+  font-weight: 300;
+}
+a,
+li {
+  list-style-type: none;
+  text-decoration: none;
+}
+li {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.outer-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.inner-container {
+  max-width: 1440px;
+  width: 100%;
+  min-height: 100vh;
+}
+.hero-bg {
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  height: 100vh;
+  top: 80px;
+  background-image: url("./assets/images/bg-intro-desktop.svg");
+  background-color: var(--very-light-gray);
+  /* background-color: rgb(64, 142, 116); */
+  background-repeat: no-repeat;
+  background-position-x: 43.4vw;
+  background-position-y: -260px;
+}
+
+@media (width <= 1170px) {
+  .hero-img-container {
+    max-width: 100%;
+  }
+  .hero-img {
+    width: 90%;
+  }
+  .hero-text-container {
+    margin-top: 5rem;
+  }
+  /* Features SECTION */
+  .features-container {
+    margin-top: 3rem;
+  }
+  .feature-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+  }
+  .features-text-container {
+    margin: 0 auto;
+    text-align: center;
+  }
+  .description {
+    margin: 2.4rem auto 0 auto;
+  }
+  /* ARTICLES SECTION */
+  .articles-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .article-card {
+    max-width: 100%;
+  }
+  /* FOOTER SECTION*/
+  .footer-links-container {
+    margin-left: 10%;
+  }
+}
+
+/* MOBILE STYLES RESPONSIVENESS */
+@media (width <= 990px) {
+  /*HERO Section  */
+
+  .hero-inner-container {
+    flex-direction: column;
+    padding-bottom: -10rem;
+  }
+  .hero-container {
+    min-height: 100%;
+    background-image: url("./assets/images/bg-intro-mobile.svg");
+    /* background-color: var(--very-light-gray); */
+    background-position-x: right;
+    background-position-y: -4.2rem;
+    background-size: contain;
+    background-color: var(--very-light-gray);
+    background-repeat: no-repeat;
+    padding: 0 5% 5rem 5%;
+  }
+  .hero-bg{
+    background-color: hsl(232, 31%, 15%);
+  }
+  .hero-img {
+    margin-right: 0;
+    margin: -121.6px auto 0 auto;
+    text-align: center;
+    width: 100%;
+  }
+  .hero-text-container {
+    text-align: center;
+    margin-top: 0;
+  }
+  .hero-title {
+    font-size: 3.5rem;
+    padding-top: 5.4rem;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .call-to-action.hero {
+    text-align: center;
+    margin: 3rem auto;
+  }
+  .hero-paragraph,
+  .hero-title {
+    margin: 1rem auto;
+  }
+
+  /* FEATURES & ARTICLES SECTION  FOR MOBILE*/
+  .features-container {
+    margin-top: 0;
+  }
+  .feature-wrapper,
+  .articles-wrapper {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  /* FOOTER SECTION  FOR MOBILE*/
+  .footer-inner-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-links-container {
+    margin-left: 0;
+  }
+  .social-links {
+    margin: 2rem 0 3rem 0;
+  }
+  .footer-links-container.first-set {
+    margin-bottom: 3rem;
+  }
+  .copy-right-CTA-container {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: 0;
+    margin-top: 3rem;
+  }
+}
+@media (width >1440px) {
+  .inner-container,
+  .nav-container,
+  .feature-wrapper,
+  .articles-wrapper,
+  .footer-inner-container {
+    max-width: 100%;
+  }
+  .footer-inner-container{
+        justify-content: space-between;
+
+  }
+  .footer-links-container{
+    margin-left: auto;
+
+  }
+}
+/* COMMON DARK MODE STYLES */
+
+.bg-dark{
+  background-color: #232D3F;
+}
+.bg-semi-dark{
+  background-color: hsl(232, 31%, 15%);
+}
+.text-color{
+  color: white;
+  opacity: .9;
+}
